@@ -1,0 +1,600 @@
+/* Dimensões da página de exemplo do Figma:
+height: 2000px;
+width: 1366px;
+
+Dimensões do topo no exemplo do figma:
+height: 54px;
+width: 911px;
+
+Tamanho do conteúdo e do topo
+width: 934px;
+
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+.barra-mobile {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Define o topo */
+.topo {
+  height: 54px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #DBDBDB;
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  background-color: #FFFFFF;
+}
+
+/* Define os ícones do topo */
+.icones-topo {
+  width: 935px;
+  display: flex;
+}
+
+/* Aplica as dimensões do logo do Instagram*/
+.icones-topo img {
+  width: 103px;
+  height: 29px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+/* Centraliza os ícones e aplica o seu tamanho correto */
+.icones-topo ion-icon {
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 19px;
+}
+
+/* Define o espaçamento entre o logo e o ícone e cria a borda separadora */
+.separador-vertical {
+  height: 22px;
+  background-color: #dbdbdb;
+  width: 1px;
+  margin: 15px 10px 17px 11px;
+}
+
+/* Define a barra de pesquisar */
+.pesquisar {
+  border: 1px solid #dbdbdb;
+  width: 215px;
+  height: 28px;
+  margin: auto;
+  line-height: 28px;
+  text-align: center;
+  font-size: 12px;
+  color: #979797;
+  border-radius: 3px;
+}
+
+/* Ativa o flex na div de ícones da direita para que eles fiquem centralizados */
+.icones-direita {
+  display: flex;
+}
+
+/* Define as margens entre os ícones da esquerda */
+.icones-direita ion-icon {
+  margin-right: 25px;
+}
+
+.corpo {
+  display: flex;
+  justify-content: center;
+  margin-top: 54px;
+}
+
+.container {
+  display: flex;
+  width: 935px;
+}
+
+.stories {
+  height: 118px;
+  width: 614px;
+  margin: 34px 0 24px 0;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  display: flex;
+  padding-left: 18px;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.story {
+  width: 66px;
+  height: 86px;
+  margin-right: 14px;
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.story p {
+  width: 78px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.background {
+  width: 66px;
+  height: 66px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.imagem-story {
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+  margin: 5px;
+  z-index: 1;
+}
+
+.seta {
+  position: absolute;
+  top: 46px;
+  right: 9px;
+  font-size: 26px;
+  color: #ffffff;
+  z-index: 1;
+}
+
+.conteudos {
+  width: 614px;
+}
+
+/* Cria espaçamento entre os conteúdos da página */
+.conteudos > div {
+  margin-bottom: 60px;
+}
+
+/* Define o posicionamento da barra lateral */
+.barra-lateral {
+  position: fixed;
+  left: auto;
+  top: 88px;
+  width: 321px;
+  height: 100%;
+  margin-left: 614px;
+}
+
+/* cria as dimensões do conteúdo */
+.conteudo {
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  width: 614px;
+}
+
+video {
+  height: 612px;
+  width: 612px;
+}
+
+/* Dimensões do título de cada conteúdo */
+.titulo-conteudo {
+  height: 61px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Coloca margem no ícone de opções à direita da caixa de conteúdos */
+.titulo-conteudo ion-icon {
+  margin-right: 18.5px;
+}
+
+/* Liga o flex na div fotoenome para alinhar a foto e o nome da página */
+.fotoenome {
+  display: flex;
+}
+
+/* Define as propriedades do texto do título */
+.fotoenome p {
+  margin: auto;
+  font-weight: 500;
+  font-size: 14px;
+  color: #262626;
+}
+
+/* define o tamanho da imagem do título, bem como suas margens */
+.titulo-conteudo img {
+  width: 32px;
+  height: 32px;
+  margin: auto 15px auto 17px;
+  border-radius: 16px;
+}
+
+/* Define o corpo do conteúdo */
+.corpo-conteudo {
+  height: 612px;
+  width: 612px;
+  background-color: black;
+}
+
+/* Faz a imagem do conteúdo ocupar toda a extensão reservada para ela */
+.corpo-conteudo img {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+/* define as dimensões da parte de curtidas e liga o display flex em coluna para mostrar os ícones
+em cima e as curtidas embaixo */
+.curtidas {
+  /* height: 176px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+/* Define o tamanho dos ícones da parte de curtidas */
+.curtidas ion-icon {
+  font-size: 19px;
+}
+
+/* define o flex na div de icones de curtida e aplica o space-between para deixar 
+o último ícone mais à direita */
+.icones-curtida {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 14px;
+}
+
+/* define a margem direita do ícone mais à direita */
+.icones-curtida-direita {
+  margin-right: 18px;
+}
+
+/* define a margem da div que contém os ícones da esquerda */
+.icones-curtida-esquerda {
+  margin: 0 18px;
+}
+
+/* cria a margem entre os ícones da esquerda */
+.icones-curtida-esquerda ion-icon {
+  margin-right: 6px;
+}
+
+/* liga o flex na div de curtido-por para mostrar o conteúdo em linha */
+.curtido-por {
+  display: flex;
+  margin-top: 14px;
+}
+
+/* define a margem do parágrafo */
+.curtido-por p {
+  margin: auto 0 auto 5px;
+  font-size: 14px;
+}
+
+/* Cria uma classe para aplicar o peso 500 em certas fontes */
+.weight-500 {
+  font-weight: 500;
+}
+
+/* define as dimensões da imagem da página que curtiu */
+.curtido-por img {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  margin-left: 17px;
+}
+
+/* Define as prorpeidades dos comentários */
+.comentarios {
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+/* Define as propriedades de cada comentário individual */
+.comentario {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 18px;
+}
+
+/* Cria a margem esquerda da frase 'há x horas' */
+.tempo_de_postagem {
+  margin-left: 18px;
+}
+
+/* Cria a margem direita dos ícones de comentário */
+.comentario ion-icon {
+  margin-right: 18px;
+  font-size: 14px;
+}
+
+/* Cria espaçamento entre o nome da pessoa e o texto */
+.comentarios span {
+  margin-right: 1px;
+}
+
+.comentarioenome span{
+  margin-right: 7px;
+}
+
+/* Define o separador horizontal */
+.separador-horizontal {
+  width: 100%;
+  background-color: #dbdbdb;
+  height: 1px;
+  margin-bottom: 12px;
+}
+
+/* Define a barra de comentar */
+.comentar {
+  margin-left: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding-right: 18px;
+}
+
+/* Alinha o emoji e a caixa de comentário */
+.emojiecomentar {
+  display: flex;
+  align-items: center;
+}
+
+/* Retira a borda das caixas de comentário e dá uma margem com relação ao emoji */
+input {
+  border: none;
+  margin-left: 15px;
+}
+
+/* Remove o destaque da caixa de comentário quando clicamos em cima dela */
+input:focus {
+  outline: none;
+}
+
+/* retira as bordas do botão, define sua cor e define a transição de cor */
+button {
+  border: none;
+  background-color: inherit;
+  color: #b2dffc;
+  transition: color 300ms;
+}
+
+/* muda a cor quando o mouse é colocado em cima */
+button:hover {
+  color: #0095f6;
+}
+
+.barra-lateral {
+  padding-left: 29px;
+}
+
+/* define as dimensões da div que contém a foto, o nick e o nome */
+.perfil {
+  display: flex;
+  margin-top: 23px;
+  align-items: center;
+  font-size: 14px;
+}
+
+/* define o tamanho da foto de perfil */
+.perfil img {
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+  margin-right: 17px;
+}
+
+/* define as propriedades do nome */
+.nome {
+  font-weight: 300;
+  color: #8e8e8e;
+  margin-top: 2px;
+}
+
+/* define uma classe para colocar a fonte de peso 400 */
+.weight-400 {
+  font-weight: 400;
+}
+
+/* Cria espaçamento entre as divs da div sugestoes*/
+.sugestoes div {
+  margin-bottom: 16px;
+}
+
+.sugestoes {
+  margin-bottom: 25px;
+}
+
+/* Escreve 'sugestões para você' com a fonte e espaçamento correto */
+.sugestoes-titulo {
+  font-size: 12px;
+  color: #8e8e8e;
+  margin-top: 24px;
+  margin-bottom: 18px;
+}
+
+.sugestoesevertudo {
+  display: flex;
+  align-items: center;
+  width: 292px;
+  justify-content: space-between;
+}
+
+/* display para o texto ficar ao lado da foto */
+.fotonomesegue {
+  display: flex;
+  width: 292px;
+  justify-content: space-between;
+  align-items: center;
+  height: 32px;
+}
+
+.lado-esquerdonomesegue {
+  display: flex;
+}
+
+.blue {
+  color: #139ef2;
+}
+
+.seguir {
+  margin-bottom: 27px;
+}
+
+/* dimensão das fotos da caixa de sugestões */
+.fotonomesegue img {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  margin-right: 11px;
+}
+
+/* espaçamento entre o nick e quais pessoas a conta segue */
+.nomesegue p {
+  margin-bottom: 6px;
+}
+
+.nomesegue {
+  display: flex;
+  flex-direction: column;
+}
+
+/* define a fonte para 14px */
+.size-14 {
+  font-size: 14px;
+}
+
+/* define a fonte para 12 px */
+.size-12 {
+  font-size: 12px;
+}
+
+/* atribui essa cor a frase "segue xxx" */
+.cor_segue {
+  color: #8e8e8e;
+}
+
+.informacoes {
+  margin-bottom: 18px;
+  color: #c7c7c7;
+  font-size: 11px;
+}
+
+@media (max-width: 935px) {
+  .icones-topo {
+    width: 100%;
+    margin: 0;
+  }
+
+  .logo {
+    margin-left: 21px;
+  }
+
+  .barra-lateral {
+    display: none;
+  }
+
+  .container {
+    justify-content: center;
+  }
+
+  .stories {
+    margin: 34px auto 24px auto;
+  }
+
+  .conteudos {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 614px) {
+  .icones-topo {
+    width: 100vw;
+    justify-content: space-between;
+    border-bottom: 1px solid #dbdbdb;
+  }
+
+  .icones-direita ion-icon {
+    margin-right: 22px;
+  }
+
+  .seta {
+    display: none;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .stories {
+    width: 100vw;
+    border: none;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .conteudos {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .conteudo {
+    width: 100vw;
+    border: none;
+  }
+
+  .titulo-conteudo {
+    border-top: 1px solid #dbdbdb;
+    width: 100vw;
+  }
+
+  .corpo-conteudo {
+    width: 100vw;
+  }
+
+  .curtidas {
+    width: 100vw;
+    border-bottom: 1px solid #dbdbdb;
+  }
+
+  video {
+    width: 100vw;
+  }
+
+  .barra-mobile {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 54px;
+    width: 100vw;
+    align-items: center;
+    border-top: 1px solid #dbdbdb;
+    padding-left: 21.75px;
+    padding-right: 21.75px;
+    background-color: #ffffff;
+    font-size: 20px;
+  }
+
+  /* Cria um padding entre o último conteúdo e a barra mobile */
+  .ultimo {
+    padding-bottom: 54px;
+  }
+}

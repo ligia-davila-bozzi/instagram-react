@@ -1,3 +1,4 @@
-alert("Test");
-alert("Test 2");
-alert("Test 3")
+import ReactDom from "react-dom";
+import App from "./components/app";
+
+ReactDom.render(<App />, document.querySelector(".root"));
