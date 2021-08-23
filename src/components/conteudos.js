@@ -109,10 +109,8 @@ function CorpoConteudo(props) {
     if(props.postImg === "video"){
         return (
         <div class="corpo-conteudo">
-            <video autoplay muted>
-                <source src={`Videos/video.mp4`} type="video/mp4" />
-                <source src={`Videos/video.ogv`} type="video/ogv" />
-                Seu navegador não suporta este vídeo
+            <video autoPlay muted>
+                <source src="/Videos/video.mp4" type="video/mp4"/>
             </video>
         </div>
         );
